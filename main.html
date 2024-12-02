@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-</body>
-
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      
+    
+      .board{
+        display: grid;
+        grid-template-columns: repeat(3,100px);
+        grid-gap:5px;
+        margin: 20px auto;
+      }
+      
+      .board div{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        background-color: black;
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+      
+      <div class="container">
+        <div class="input-section" id="input-section">
+          <h1>Tic Tac Toe</h1>
+          <input type="text" id="player-1" placeholder="enter name">
+          <input type="text" id="player-2" placeholder="enter name">
+          <button id="submit">Submit</button>
+        </div>
+        
+        <div class="game-section" id="game-section" style="display:none">
+          <h1>Tic Tac Toe</h1>
+          <div class="message" id="message"></div>
+          <div class="board" id="board"></div>
+        </div>
+      </div>
+      
+      <script src="index.js"></script>
+  </body>
 </html>
